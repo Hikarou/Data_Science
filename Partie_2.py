@@ -66,7 +66,7 @@ def main() -> None:
                 tree_scores.append(np.mean(np.array(local_scores)))
         # print(tree_scores)
         tree_mean = np.mean(np.array(tree_scores))
-        print("n_neigh mean : {}".format(tree_mean))
+        print("tree mean : {}".format(tree_mean))
 
     pass
 
