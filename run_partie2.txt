@@ -1,0 +1,16 @@
+Breast Cancer data :
+KNeighborsClassifier mean is 0.916484876713102 with 0.005622660612286429 as standard deviation
+DecisionTreeClassifier mean is 0.9184639595771408 with 0.007800792311502525 as standard deviation
+MLPClassifier one layer sgd_solver mean is 0.720028722248098 with 0.016875713169677294 as standard deviation
+MLPClassifier one layer adam_solver mean is 0.8322087667546447 with 0.0160911901457089 as standard deviation
+/usr/lib/python3.6/site-packages/sklearn/neural_network/multilayer_perceptron.py:564: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet.
+  % self.max_iter, ConvergenceWarning)
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.7119176628887854 with 0.013213477511527983 as standard deviation
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.8766840035191223 with 0.006820495882134434 as standard deviation
+Wine data :
+KNeighborsClassifier mean is 0.7251558441558441 with 0.059403239080133306 as standard deviation
+DecisionTreeClassifier mean is 0.8242727272727273 with 0.06312982173624909 as standard deviation
+MLPClassifier one layer sgd_solver mean is 0.5344179894179895 with 0.015602051233331294 as standard deviation
+MLPClassifier one layer adam_solver mean is 0.48467724867724865 with 0.06501720427911196 as standard deviation
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.377021164021164 with 0.018363312715419022 as standard deviation
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.48548941798941797 with 0.015178396340242711 as standard deviation
