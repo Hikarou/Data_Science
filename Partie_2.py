@@ -22,7 +22,7 @@ def main() -> None:
     # KNeighborsClassifier
     sub_params = []
     for n_neighbors in range(1, 52, 5):
-        sub_params.append({"n_neighbors": n_neighbors})
+        sub_params.append({"n_neighbors": n_neighbors, 'n_jobs': -1})
     params.append(sub_params)
 
     # DecisionTreeClassifier
