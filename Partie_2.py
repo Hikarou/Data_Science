@@ -8,6 +8,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn import preprocessing
 import numpy as np
+import time
 
 
 def main() -> None:
@@ -76,6 +77,7 @@ def main() -> None:
 
         for classifier, name, sub_param in zip(classifiers, classifiers_name, params):
             scores = []
+            start = time.perf_counter()
             for param in sub_param:
                 local_scores = []
                 for train_index, test_index in kf.split(x):
@@ -88,10 +90,12 @@ def main() -> None:
                     predictions = model.predict(x_test)
                     local_scores.append(accuracy_score(y_test, predictions))
                 scores.append(np.mean(np.array(local_scores)))
+            end = time.perf_counter()
             np_arr = np.array(scores)
             mean = np.mean(np_arr)
             standard_deviation = np.std(np_arr, ddof=1)
-            print("{} mean is {} with {} as standard deviation".format(name, mean, standard_deviation))
+            print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean, standard_deviation,
+                                                                                      end - start))
 
 
 if __name__ == '__main__':

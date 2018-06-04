@@ -3,9 +3,8 @@ from sklearn.model_selection import RepeatedKFold
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn import preprocessing
 import numpy as np
-import pandas as pd
+import time
 
 
 def main() -> None:
@@ -19,7 +18,7 @@ def main() -> None:
     # KNeighborsClassifier
     sub_params = []
     for n_neighbors in range(1, 52, 5):
-        sub_params.append({"n_neighbors": n_neighbors})
+        sub_params.append({"n_neighbors": n_neighbors, 'n_jobs': -1})
     params.append(sub_params)
 
     # DecisionTreeClassifier
@@ -65,11 +64,12 @@ def main() -> None:
 
     kf = RepeatedKFold(n_splits=5, n_repeats=10, random_state=None)
 
-    x = data[:, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]]
+    x = data[:, list(range(1, 17))]
     y = data[:, 0]
 
     for classifier, name, sub_param in zip(classifiers, classifiers_name, params):
         scores = []
+        start = time.perf_counter()
         for param in sub_param:
             local_scores = []
             for train_index, test_index in kf.split(x):
@@ -82,10 +82,13 @@ def main() -> None:
                 predictions = model.predict(x_test)
                 local_scores.append(accuracy_score(y_test, predictions))
             scores.append(np.mean(np.array(local_scores)))
+        end = time.perf_counter()
         np_arr = np.array(scores)
         mean = np.mean(np_arr)
         standard_deviation = np.std(np_arr, ddof=1)
-        print("{} mean is {} with {} as standard deviation".format(name, mean, standard_deviation))
+        print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean,
+                                                                                          standard_deviation,
+                                                                                          end - start))
 
 
 if __name__ == '__main__':
