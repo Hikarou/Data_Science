@@ -49,78 +49,78 @@ def main() -> None:
         y_centers.append(i[1])
         z_centers.append(i[2])
         
+    x_dead = []
+    y_dead = []
+    z_dead = []    
     x_survived = []
     y_survived = []
     z_survived = []
-    x_dead = []
-    y_dead = []
-    z_dead = []
     for i in titanic_data:
-        if (i[3] == -1.0):#3 vectors each with one of the coordinates of the survived points
-            x_survived.append(i[0])
-            y_survived.append(i[1])
-            z_survived.append(i[2])
-        else:#3 vectors each with one of the coordinates of the dead points
+        if (i[3] == -1.0):#3 vectors each with one of the coordinates of the "dead" points
             x_dead.append(i[0])
             y_dead.append(i[1])
             z_dead.append(i[2])
+        else:#3 vectors each with one of the coordinates of the "survived" points
+            x_survived.append(i[0])
+            y_survived.append(i[1])
+            z_survived.append(i[2])
         
     """3d"""
     ax = plt.axes(projection='3d')
     
-    ax.scatter3D(x_survived, y_survived, z_survived, s=50, c='blue', marker='s', label='rescapes');
-    ax.scatter3D(x_dead, y_dead, z_dead, s=25, c='red', marker='o', label='morts');
-    ax.scatter3D(x_centers, y_centers, z_centers, s=10, c='black', marker='x', label='barycentres');
+    ax.scatter3D(x_dead, y_dead, z_dead, s=50, c='r', marker='s', label='morts');
+    ax.scatter3D(x_survived, y_survived, z_survived, s=25, c='b', marker='o', label='rescapes');
+    ax.scatter3D(x_centers, y_centers, z_centers, s=20, c='black', marker='x', label='barycentres');
 
     ax.set_title('Donnees', fontsize=16)
-    ax.set_xlabel('billet')
-    ax.set_ylabel('age')
-    ax.set_zlabel('sexe')
+    ax.set_xlabel('billet:[1ere, 2eme, 3eme, equipage]')
+    ax.set_ylabel('age:[adultes, enfants]')
+    ax.set_zlabel('sexe:[femmes, hommes]')
 
-    plt.legend(loc='upper left');
+    plt.legend(loc='best');
     plt.show()
     
     """2d:age/billet"""
     fig = plt.figure()
     ax1 = fig.add_subplot(111)
 
-    ax1.scatter(x_survived, y_survived, s=50, c='b', marker="s", label='rescapes')
-    ax1.scatter(x_dead, y_dead, s=25, c='r', marker="o", label='morts')
-    ax1.scatter(x_centers, y_centers, s=10, c='black', marker="x", label='barycentres')
+    ax1.scatter(x_dead, y_dead, s=50, c='r', marker='s', label='morts');
+    ax1.scatter(x_survived, y_survived, s=25, c='b', marker='o', label='rescapes');
+    ax1.scatter(x_centers, y_centers, s=20, c='black', marker="x", label='barycentres')
     
     ax1.set_title('Donnees: age/billet', fontsize=16)
-    ax1.set_xlabel('billet')
-    ax1.set_ylabel('age')
+    ax1.set_xlabel('billet:[1ere, 2eme, 3eme, equipage]')
+    ax1.set_ylabel('age:[adultes, enfants]')
     
-    plt.legend(loc='upper right');
+    plt.legend(loc='best');
     plt.show()
     
     """2d:sexe/age"""
     fig = plt.figure()
     ax1 = fig.add_subplot(111)
 
-    ax1.scatter(y_survived, z_survived, s=50, c='b', marker="s", label='rescapes')
-    ax1.scatter(y_dead, z_dead, s=25, c='r', marker="o", label='morts')
-    ax1.scatter(y_centers, z_centers, s=10, c='black', marker="x", label='barycentres')
+    ax1.scatter(y_dead, z_dead, s=50, c='r', marker='s', label='morts');
+    ax1.scatter(y_survived, z_survived, s=25, c='b', marker='o', label='rescapes');
+    ax1.scatter(y_centers, z_centers, s=20, c='black', marker="x", label='barycentres')
     
     ax1.set_title('Donnees: sexe/age', fontsize=16)
-    ax1.set_xlabel('age')
-    ax1.set_ylabel('sexe')
+    ax1.set_xlabel('age:[adultes, enfants]')
+    ax1.set_ylabel('sexe:[femmes, hommes]')
     
-    plt.legend(loc='left');
+    plt.legend(loc='best');
     plt.show()
     
     """2d:sexe/billet"""
     fig = plt.figure()
     ax1 = fig.add_subplot(111)
 
-    ax1.scatter(x_survived, z_survived, s=50, c='b', marker="s", label='rescapes')
-    ax1.scatter(x_dead, z_dead, s=25, c='r', marker="o", label='morts')
-    ax1.scatter(x_centers, z_centers, s=10, c='black', marker="x", label='barycentres')
+    ax1.scatter(x_dead, z_dead, s=50, c='r', marker='s', label='morts');
+    ax1.scatter(x_survived, z_survived, s=25, c='b', marker='o', label='rescapes');
+    ax1.scatter(x_centers, z_centers, s=20, c='black', marker="x", label='barycentres')
     
     ax1.set_title('Donnees: sexe/billet', fontsize=16)
-    ax1.set_xlabel('billet')
-    ax1.set_ylabel('sexe')
+    ax1.set_xlabel('billet:[1ere, 2eme, 3eme, equipage]')
+    ax1.set_ylabel('sexe:[femmes, hommes]')
     
     plt.legend(loc='right');
     plt.show()
