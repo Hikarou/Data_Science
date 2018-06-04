@@ -1,16 +1,14 @@
 Breast Cancer data :
-KNeighborsClassifier mean is 0.916484876713102 with 0.005622660612286429 as standard deviation
-DecisionTreeClassifier mean is 0.9184639595771408 with 0.007800792311502525 as standard deviation
-MLPClassifier one layer sgd_solver mean is 0.720028722248098 with 0.016875713169677294 as standard deviation
-MLPClassifier one layer adam_solver mean is 0.8322087667546447 with 0.0160911901457089 as standard deviation
-/usr/lib/python3.6/site-packages/sklearn/neural_network/multilayer_perceptron.py:564: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet.
-  % self.max_iter, ConvergenceWarning)
-MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.7119176628887854 with 0.013213477511527983 as standard deviation
-MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.8766840035191223 with 0.006820495882134434 as standard deviation
+KNeighborsClassifier mean is 0.9165150809445174 with 0.006031439563612894 as standard deviation. Worked for 57.976104308000004 seconds
+DecisionTreeClassifier mean is 0.9188036866099278 with 0.008768322606215441 as standard deviation. Worked for 2.0550546820000193 seconds
+MLPClassifier one layer sgd_solver mean is 0.7146191067639601 with 0.020778624200115337 as standard deviation. Worked for 30.68853832299999 seconds
+MLPClassifier one layer adam_solver mean is 0.8286114992495989 with 0.009638599329423085 as standard deviation. Worked for 6.644529698000014 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.7096302334006106 with 0.023048728487390643 as standard deviation. Worked for 253.078048012 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.8711708844382343 with 0.009458455283511294 as standard deviation. Worked for 23.13941727399998 seconds
 Wine data :
-KNeighborsClassifier mean is 0.7251558441558441 with 0.059403239080133306 as standard deviation
-DecisionTreeClassifier mean is 0.8242727272727273 with 0.06312982173624909 as standard deviation
-MLPClassifier one layer sgd_solver mean is 0.5344179894179895 with 0.015602051233331294 as standard deviation
-MLPClassifier one layer adam_solver mean is 0.48467724867724865 with 0.06501720427911196 as standard deviation
-MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.377021164021164 with 0.018363312715419022 as standard deviation
-MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.48548941798941797 with 0.015178396340242711 as standard deviation
+KNeighborsClassifier mean is 0.7282857142857142 with 0.0608019667734298 as standard deviation. Worked for 58.012638423000055 seconds
+DecisionTreeClassifier mean is 0.8234559884559883 with 0.0673350628378157 as standard deviation. Worked for 0.30206355300003906 seconds
+MLPClassifier one layer sgd_solver mean is 0.5105185185185185 with 0.03884743325449902 as standard deviation. Worked for 58.032719318999966 seconds
+MLPClassifier one layer adam_solver mean is 0.4657037037037037 with 0.038443332487119404 as standard deviation. Worked for 5.502503615000023 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.3772751322751322 with 0.019904196510201578 as standard deviation. Worked for 101.85631736200003 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.4920026455026456 with 0.01780362185166842 as standard deviation. Worked for 7.6039858890000005 seconds
