@@ -94,7 +94,7 @@ def main() -> None:
             np_arr = np.array(scores)
             mean = np.mean(np_arr)
             standard_deviation = np.std(np_arr)
-            print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean,
+            print("{}\n\tmean is {} with {} as standard deviation.\n\tWorked for {} seconds".format(name, mean,
                                                                                               standard_deviation,
                                                                                               end - start))
 
