@@ -71,7 +71,7 @@ def main() -> None:
 
     for data, data_name in zip(datas, datas_name):
         raw = data()
-        print("{} data :".format(data_name))
+        print("{} data of size {} :".format(data_name, raw['data'].size))
         x = preprocessing.normalize(raw['data'])
         y = raw['target']
 
@@ -93,9 +93,10 @@ def main() -> None:
             end = time.perf_counter()
             np_arr = np.array(scores)
             mean = np.mean(np_arr)
-            standard_deviation = np.std(np_arr, ddof=1)
-            print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean, standard_deviation,
-                                                                                      end - start))
+            standard_deviation = np.std(np_arr)
+            print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean,
+                                                                                              standard_deviation,
+                                                                                              end - start))
 
 
 if __name__ == '__main__':

@@ -1,14 +1,14 @@
-Breast Cancer data :
-KNeighborsClassifier mean is 0.9165150809445174 with 0.006031439563612894 as standard deviation. Worked for 57.976104308000004 seconds
-DecisionTreeClassifier mean is 0.9188036866099278 with 0.008768322606215441 as standard deviation. Worked for 2.0550546820000193 seconds
-MLPClassifier one layer sgd_solver mean is 0.7146191067639601 with 0.020778624200115337 as standard deviation. Worked for 30.68853832299999 seconds
-MLPClassifier one layer adam_solver mean is 0.8286114992495989 with 0.009638599329423085 as standard deviation. Worked for 6.644529698000014 seconds
-MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.7096302334006106 with 0.023048728487390643 as standard deviation. Worked for 253.078048012 seconds
-MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.8711708844382343 with 0.009458455283511294 as standard deviation. Worked for 23.13941727399998 seconds
-Wine data :
-KNeighborsClassifier mean is 0.7282857142857142 with 0.0608019667734298 as standard deviation. Worked for 58.012638423000055 seconds
-DecisionTreeClassifier mean is 0.8234559884559883 with 0.0673350628378157 as standard deviation. Worked for 0.30206355300003906 seconds
-MLPClassifier one layer sgd_solver mean is 0.5105185185185185 with 0.03884743325449902 as standard deviation. Worked for 58.032719318999966 seconds
-MLPClassifier one layer adam_solver mean is 0.4657037037037037 with 0.038443332487119404 as standard deviation. Worked for 5.502503615000023 seconds
-MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.3772751322751322 with 0.019904196510201578 as standard deviation. Worked for 101.85631736200003 seconds
-MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.4920026455026456 with 0.01780362185166842 as standard deviation. Worked for 7.6039858890000005 seconds
+Breast Cancer data of size 17070 :
+KNeighborsClassifier mean is 0.9156905336551354 with 0.0062623477743796365 as standard deviation. Worked for 58.384049542999946 seconds
+DecisionTreeClassifier mean is 0.9191565397806664 with 0.007338393970481109 as standard deviation. Worked for 2.2568116719999125 seconds
+MLPClassifier one layer sgd_solver mean is 0.7175648191274648 with 0.022043122048362545 as standard deviation. Worked for 36.077531977000035 seconds
+MLPClassifier one layer adam_solver mean is 0.823903379392434 with 0.008527324780371515 as standard deviation. Worked for 5.917518905000179 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.7129796097914403 with 0.013481418871693272 as standard deviation. Worked for 201.293589999 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.8714832065414274 with 0.011530948137947717 as standard deviation. Worked for 15.470668224000065 seconds
+Wine data of size 2314 :
+KNeighborsClassifier mean is 0.7273939393939394 with 0.05812048585108899 as standard deviation. Worked for 58.26490291599998 seconds
+DecisionTreeClassifier mean is 0.8267864357864357 with 0.06256307140368493 as standard deviation. Worked for 0.29779543899985583 seconds
+MLPClassifier one layer sgd_solver mean is 0.5263121693121693 with 0.008238740871758458 as standard deviation. Worked for 63.89405386599992 seconds
+MLPClassifier one layer adam_solver mean is 0.44062698412698403 with 0.034461638053849115 as standard deviation. Worked for 5.811695912000005 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver mean is 0.3712328042328042 with 0.014101673618638889 as standard deviation. Worked for 108.80420700700006 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver mean is 0.5002275132275132 with 0.0186255230503609 as standard deviation. Worked for 9.023194484999976 seconds

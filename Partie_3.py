@@ -85,7 +85,7 @@ def main() -> None:
         end = time.perf_counter()
         np_arr = np.array(scores)
         mean = np.mean(np_arr)
-        standard_deviation = np.std(np_arr, ddof=1)
+        standard_deviation = np.std(np_arr)
         print("{} mean is {} with {} as standard deviation. Worked for {} seconds".format(name, mean,
                                                                                           standard_deviation,
                                                                                           end - start))
