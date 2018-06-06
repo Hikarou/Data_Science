@@ -1,12 +1,11 @@
 from sklearn.cluster import KMeans
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits import mplot3d
+from mpl_toolkits.mplot3d import Axes3D
 
 
 def main() -> None:
-    titanic_data = np.loadtxt('titanic.dat', delimiter=',', skiprows=8)
-    
+    titanic_data = np.loadtxt('titanic.dat', delimiter=',', skiprows=8)    
     
     """Mean value"""
     means = []  # mean value for each K
@@ -23,10 +22,10 @@ def main() -> None:
             n_points = 0
             result = 0
             for k in range(len(titanic_data)):  # index of each data point
-                if (labels[k] == j):
+                if labels[k] == j:
                     n_points += 1
                     result += clusters_distances[k][j]
-            if (n_points == 0): #if no point is close to this cluster (only at initialization)
+            if n_points == 0: #if no point is close to this cluster (only at initialization)
                 continue;
             else:        
                 mean_distances.append(result / n_points)
@@ -37,17 +36,15 @@ def main() -> None:
     plt.title('Valeur moyenne en fonction de K', fontsize=16)
     plt.ylabel('Valeur moyenne')
     plt.xlabel('K')
-    plt.show()
-    
-    
+    plt.show()  
     
     """Data display"""
-    KM = KMeans(n_clusters=8, init='random', random_state=0).fit(titanic_data)#8: chosen value for K
+    KM = KMeans(n_clusters=8, init='random', random_state=0).fit(titanic_data) #8: chosen value for K
     centers = KM.cluster_centers_
     x_centers = []
     y_centers = []
     z_centers = []
-    for i in centers:#3 vectors each with one of the coordinates of the centers points
+    for i in centers: #3 vectors each with one of the coordinates of the centers points
         x_centers.append(i[0])
         y_centers.append(i[1])
         z_centers.append(i[2])
@@ -59,17 +56,17 @@ def main() -> None:
     y_survived = []
     z_survived = []
     for i in titanic_data:
-        if (i[3] == -1.0):#3 vectors each with one of the coordinates of the "dead" points
+        if i[3] == -1.0: #3 vectors each with one of the coordinates of the "dead" points
             x_dead.append(i[0])
             y_dead.append(i[1])
             z_dead.append(i[2])
-        else:#3 vectors each with one of the coordinates of the "survived" points
+        else: #3 vectors each with one of the coordinates of the "survived" points
             x_survived.append(i[0])
             y_survived.append(i[1])
             z_survived.append(i[2])
         
     """3d"""
-    ax = plt.axes(projection='3d')
+    ax: Axes3D = plt.axes(projection='3d')
     
     ax.scatter3D(x_dead, y_dead, z_dead, s=50, c='r', marker='s', label='morts');
     ax.scatter3D(x_survived, y_survived, z_survived, s=25, c='y', marker='o', label='rescapes');
