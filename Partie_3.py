@@ -1,3 +1,4 @@
+from sklearn import preprocessing
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import RepeatedKFold
 from sklearn.neighbors import KNeighborsClassifier
@@ -64,7 +65,7 @@ def main() -> None:
 
     kf = RepeatedKFold(n_splits=5, n_repeats=10, random_state=None)
 
-    x = data[:, list(range(1, 17))]
+    x = preprocessing.normalize(data[:, list(range(1, 17))])
     y = data[:, 0]
 
     for classifier, name, sub_param in zip(classifiers, classifiers_name, params):

@@ -24,7 +24,8 @@
 				%Suite
 %\usepackage{url}				%Cr\'{e}ation d'url
 \usepackage{verbatim}				%Citation de code
-%\usepackage{moreverb}				%Citation de code
+\usepackage{moreverb}				%Citation de code
+\let\verbatiminput=\verbatimtabinput
 \usepackage{listings}				%Citation de code color\'{e}
 %\usepackage{fancyhdr}				%En tete et pied de page personnalis\'{e}
 %\usepackage{multicol}				%Pouvoir ecrire sur plusieures colonnes
@@ -47,6 +48,7 @@
 \usepackage{enumitem}     %listings alphanum\'{e}iques
 \usepackage{hyperref}
 %\usepackage{minted}
+%\usepackage{tabto}
 
 % Title Page
 \title{Projet Noté\\
@@ -163,6 +165,22 @@
     Pour ce qui est du temps de travail en fonction du nombre d'échantillons, c'est globalement plus rapide avec moins d'échantillons.
     
     Par contre, c'est pas parce que le temps de travail est plus grand que le score final sera meilleur.
+\pagebreak
 \section{Partie 3}
-
+    Pour la partie 3, nous avons décidé de partie sur les données suivantes : ``Letter Image Recognition Data'', donc la reconnaissance de lettres par caractéristiques d'image.
+    
+    Cette base de donnée contient 20000 éléments.
+    
+    Il y a 17 attributs différents :
+    \verbatiminput{letter-recognition.names}
+    
+    On a commencé par transformer les lettres en nombres (i.e. A->0, B->1, ..., Z->25) pour avoir que des valeurs numériques pour simplifier l'import des données avec \verb?numpy.genfromtxt()?
+    
+    Nous avons repris le code de la partie 2 pour la comparaison des modèles d'apprentissage.
+    
+    Les résultats sont les suivants :
+    
+    \verbatiminput{partie3.txt}
+    
+    Les résultats avec ces données sont beaucoup plus variables que dans la partie 2
 \end{document}
