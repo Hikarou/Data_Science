@@ -30,7 +30,54 @@
     
     \begin{frame}
         \frametitle{Partie 1}
-        \framesubtitle{TOTO} %TODO
+        \framesubtitle{Datasets}
+        Titanic :
+        \begin{itemize}
+         \item Nombre de données : 2201
+         \item Nombre de classes: 2 (Survived or Died)
+         \item Dimensionalité : 3 (billet, âge, sexe)
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Méthodologie}
+        \begin{itemize}
+            \item \verb?KMeans?
+            \item Paramètres fixes : \verb?init='random'?, \verb?random_state=0?
+        
+            \item Paramètre variable : \verb?n_clusters? nombre de clusters [1,25] avec un pas de 1
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Résultats}
+        \includegraphics[scale=0.6]{p1-1}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Résultats}
+        \includegraphics[scale=0.6]{p1-2}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Résultats}
+        \includegraphics[scale=0.6]{p1-3}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Résultats}
+        \includegraphics[scale=0.6]{p1-4}
+    \end{frame}
+    
+    \begin{frame}[fragile]
+        \frametitle{Partie 1}
+        \framesubtitle{Résultats}
+        \includegraphics[scale=0.6]{p1-5}
     \end{frame}
     
     \begin{frame}
@@ -80,7 +127,7 @@
             \item Paramètre variable: \verb?min_samples_leaf? Nombre d'objets à partir duquel on comptabilise une feuille [2, 52] avec un pas de 5
         \end{itemize}
     \end{frame}
-    
+
     \begin{frame}[fragile]
         \frametitle{Partie 2}
         \framesubtitle{Classificateur : Perceptron multi-couche avec une couche utilisant ``stochastic gradient descent''}
