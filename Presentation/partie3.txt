@@ -1,0 +1,18 @@
+KNeighborsClassifier
+	mean is 0.9203122727272728 with 0.020939017447170083 as standard deviation.
+	Worked for 360.20789452599956 seconds
+DecisionTreeClassifier
+	mean is 0.733379090909091 with 0.04240275735128243 as standard deviation.
+	Worked for 174.38097832700032 seconds
+MLPClassifier one layer sgd_solver
+	mean is 0.5157916666666665 with 0.17533825530163752 as standard deviation.
+	Worked for 700.9990525189996 seconds
+MLPClassifier one layer adam_solver
+	mean is 0.6683058333333333 with 0.16247980283245123 as standard deviation.
+	Worked for 254.53706921899993 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver
+	mean is 0.039465 with 0.0011532309684823187 as standard deviation.
+	Worked for 102.64895842199985 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver
+	mean is 0.319565 with 0.07064751617478612 as standard deviation.
+	Worked for 232.7630711769998 seconds
