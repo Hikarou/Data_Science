@@ -1,4 +1,4 @@
-Breast Cancer data of size 17070 :
+Breast Cancer data of size 569 :
 KNeighborsClassifier
 	mean is 0.9156607528475251 with 0.005261918472447842 as standard deviation.
 	Worked for 58.37147793300028 seconds
@@ -17,7 +17,7 @@ MLPClassifier two layers, second layer 5 nodes, sgd_solver
 MLPClassifier two layers, second layer 5 nodes, adam_solver
 	mean is 0.8806233504114266 with 0.007611351937622535 as standard deviation.
 	Worked for 19.824140925999927 seconds
-Wine data of size 2314 :
+Wine data of size 178 :
 KNeighborsClassifier
 	mean is 0.7270447330447332 with 0.05395925687595904 as standard deviation.
 	Worked for 58.24855370300065 seconds

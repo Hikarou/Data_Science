@@ -134,12 +134,12 @@
         
         Paramètres fixes : \verb?solver='adam', activation='logistic', max_iter=1000, verbose=False, learning_rate_init=0.1, tol=0., early_stopping=True?
         
-        Paramètre variable : \verb?hidden_layer_sizes=(nodes,)? donc une couche et nodes varie entre 2 et 20 par pas de 3.
+        Paramètre variable : \verb?hidden_layer_sizes=(nodes, 5)? donc deux couches et nodes varie entre 2 et 20 par pas de 3.
         \item \verb?MLPClassifier? pour le Perceptron multi-couche avec deux couches utilisant ``stochastic gradient descent''
         
         Paramètres fixes : \verb?solver='sgd', activation='logistic', max_iter=1000, verbose=False, learning_rate_init=0.1, tol=0., early_stopping=True?
         
-        Paramètre variable : \verb?hidden_layer_sizes=(nodes,)? donc une couche et nodes varie entre 2 et 20 par pas de 3.
+        Paramètre variable : \verb?hidden_layer_sizes=(nodes,5)? donc deux couches et nodes varie entre 2 et 20 par pas de 3.
         \item \verb?MLPClassifier? pour le Perceptron multi-couche avec deux couches utilisant ``a stochastic gradient-based optimizer''
         
         Paramètres fixes : \verb?solver='adam', activation='logistic', max_iter=1000, verbose=False, learning_rate_init=0.1, tol=0., early_stopping=True?

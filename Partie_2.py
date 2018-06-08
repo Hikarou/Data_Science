@@ -71,7 +71,7 @@ def main() -> None:
 
     for data, data_name in zip(datas, datas_name):
         raw = data()
-        print("{} data of size {} :".format(data_name, raw['data'].size))
+        print("{} data of size {} :".format(data_name, raw['data'].shape[0]))
         x = preprocessing.normalize(raw['data'])
         y = raw['target']
 
