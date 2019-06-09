@@ -555,3 +555,7 @@ TSWLatexianTemp*
 # mkdocs documentation
 
 # mypy
+
+Rapport/
+
+Presentation/
