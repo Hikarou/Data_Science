@@ -1,0 +1,19 @@
+Wine data of size 178 :
+KNeighborsClassifier
+	mean is 0.7270447330447332 with 0.05395925687595904 as standard deviation.
+	Worked for 58.24855370300065 seconds
+DecisionTreeClassifier
+	mean is 0.8258658008658007 with 0.06566382345753549 as standard deviation.
+	Worked for 0.2911996069997258 seconds
+MLPClassifier one layer sgd_solver
+	mean is 0.511431216931217 with 0.013653796940041013 as standard deviation.
+	Worked for 52.15133309700013 seconds
+MLPClassifier one layer adam_solver
+	mean is 0.46363756613756607 with 0.04200778922986875 as standard deviation.
+	Worked for 4.492833305000204 seconds
+MLPClassifier two layers, second layer 5 nodes, sgd_solver
+	mean is 0.37066137566137564 with 0.013903555873703817 as standard deviation.
+	Worked for 113.28683143299986 seconds
+MLPClassifier two layers, second layer 5 nodes, adam_solver
+	mean is 0.49454232804232806 with 0.011857834905633243 as standard deviation.
+	Worked for 7.685992364000413 seconds
